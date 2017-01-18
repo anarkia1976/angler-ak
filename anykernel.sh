@@ -33,6 +33,10 @@ dump_boot;
 
 # begin ramdisk changes
 
+# insert casuals init modding
+backup_file init.rc
+insert_line init.rc "import /init.casuals.rc" after "import .*\.rc" "import /init.casuals.rc"
+
 # end ramdisk changes
 
 write_boot;
